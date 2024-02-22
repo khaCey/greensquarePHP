@@ -34,8 +34,20 @@ document.addEventListener('DOMContentLoaded', function() {
             clearInterval(slideInterval); // Stop the slideshow
             goToSlide(index); // Move to the slide corresponding to the dot clicked
             slideInterval = setInterval(nextSlide, 5000); // Restart the slideshow
+            console.log('pressed');
         });
     });
 
     initializeSlideshow(); // Call the function to initialize and start the slideshow
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.querySelector('.hamburger');
+    
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('open');
+        console.log('pressed');
+    });
+});
+

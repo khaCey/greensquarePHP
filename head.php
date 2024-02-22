@@ -36,9 +36,5 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.webp">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="description" content="Green Square Cafe, an English Language school in Komae Tokyo, that helps people learn daily conversation English, travel English, business English and English forexam preparation. Green Square Cafeは、東京都狛江市にある英会話を学べるカフェです。ビジネス英会話、日常英会話、英語試験対策、旅行役立つ英会話も提供しています">
-<!-- 
- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="style/jquery.drawer.min.js"></script> -->
 
 </head>
