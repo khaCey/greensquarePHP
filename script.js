@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSlideshow(); // Call the function to initialize and start the slideshow
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var hamburger = document.querySelector('.hamburger');
     
@@ -50,4 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('pressed');
     });
 });
+
+
 
