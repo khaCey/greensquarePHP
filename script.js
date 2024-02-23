@@ -43,12 +43,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     var hamburger = document.querySelector('.hamburger');
+    var sidebar = document.querySelector('.sidebar');
     
+    // Initially hide the sidebar off-screen
+    sidebar.style.left = '-65vw'; // This assumes your sidebar's width is 75vw
+
     hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('open');
-        console.log('pressed');
+        this.classList.toggle('open');
+        
+        // Check the current state and toggle sidebar visibility
+        if (sidebar.style.left === '-65vw') {
+            sidebar.style.left = '0';
+        } else {
+            sidebar.style.left = '-65vw';
+        }
     });
 });
+
 
 
 

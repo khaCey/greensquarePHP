@@ -4,16 +4,18 @@
 }
 
 nav {
-  background-color: #00994d;
-  padding: 0.5em;
-  display: flex;
-  justify-content: center;
 }
 
 .nav-head {
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
+  background-color: #00994d;
+  height: 4em;
+  position: fixed;
+  top: 0;
+  z-index: 4;
   a {
     color: white;
     text-decoration: none;
@@ -25,15 +27,79 @@ nav {
   }
 }
 
+.burgerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 1em;
+  top: 1.25em;
+  z-index: 99;
+}
+
+.sidebar {
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 5;
+  top: 0;
+  left: -70vw; /* This will show the sidebar, you need it to be off-screen initially */
+  height: 100vh;
+  width: 65vw;
+  max-width: 500px;
+  background-color: #008042;
+  transition: left 0.5s ease-in-out; /* Animate the left property */
+  .menu{
+    margin-top: 4em;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .item {
+      padding: 0.5em;
+      padding-left: 1em;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+      }
+      a:hover {
+        color: #002e0f;
+      }
+    }
+  }
+  .footer{
+    margin-top: 2em;
+    font-size: 1.5em;
+    width: 65vw;
+    max-width: 500px;
+    .footerDiv{
+      margin: 0.5em;
+      margin-left: 0.5em;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      border-top: 1px solid white;
+      a{
+        text-decoration: none;
+      }
+    }
+    .socials{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+}
+
 .container {
   width: 90%;
-  max-width: 950px;
+  max-width: 650px;
   margin: auto;
   margin-top: 10em;
 }
 
 /* landing */
-
 .lessonsContainer{
     width: 100%;
     height: 100%;
@@ -48,7 +114,6 @@ nav {
     justify-content: center;
     gap: 2em;
     width: 100%;
-
     .item{
         width: 45%;
         img{
@@ -59,8 +124,6 @@ nav {
         }
     }
 }
-
-
 
 .contentsContainer{
   width: 100%;
@@ -79,6 +142,10 @@ nav {
     }
     h2{
       margin: auto;
+    }
+    .midSection{
+      width: 100%;
+      text-align: center;
     }
   }
   .lessonTypes{
@@ -102,12 +169,54 @@ nav {
   }
 }
 
+.blogContainer{
+  outline: 1px dashed blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .blogDiv{
+    outline: 1px dashed red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    .item{
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img{
+        max-width:100%;
+        min-width: 25%;
+        max-height:100%;
+        min-height: 25%;
+      }
+    }
+  }
+  .podcastDiv{
+    outline: 1px dashed green;
+    width: 100%;
+    .item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img{
+        margin: 1em;
+        max-width: 95%;
+        min-width: 25%;
+        max-height: 100%;
+        min-height: 25%;
+        outline: 1px dashed red;
+      }
+    }
+  }
+}
 /* hamburger icon */
-.hamburger{
-  width: 60px;
-  height: 45px;
-  position: absolute;
-  margin: 50px auto;
+.hamburger {
+  width: 30px; 
+  height: 22.5px; 
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -122,9 +231,9 @@ nav {
 .hamburger span {
   display: block;
   position: absolute;
-  height: 9px;
-  width: 50%;
-  background: #d3531a;
+  height: 4.5px; 
+  width: 50%; 
+  background: white;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -137,35 +246,35 @@ nav {
 }
 
 .hamburger span:nth-child(even) {
-  left: 50%;
-  border-radius: 0 9px 9px 0;
+  left: 50%; 
+  border-radius: 0 4.5px 4.5px 0; 
 }
 
 .hamburger span:nth-child(odd) {
-  left:0px;
-  border-radius: 9px 0 0 9px;
+  left: 0px; 
+  border-radius: 4.5px 0 0 4.5px; 
 }
 
 .hamburger span:nth-child(1), .hamburger span:nth-child(2) {
-  top: 0px;
+  top: 0px; 
 }
 
 .hamburger span:nth-child(3), .hamburger span:nth-child(4) {
-  top: 18px;
+  top: 9px; 
 }
 
 .hamburger span:nth-child(5), .hamburger span:nth-child(6) {
-  top: 36px;
+  top: 18px; 
 }
 
-.hamburger.open span:nth-child(1),.hamburger.open span:nth-child(6) {
+.hamburger.open span:nth-child(1), .hamburger.open span:nth-child(6) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-.hamburger.open span:nth-child(2),.hamburger.open span:nth-child(5) {
+.hamburger.open span:nth-child(2), .hamburger.open span:nth-child(5) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
@@ -173,13 +282,13 @@ nav {
 }
 
 .hamburger.open span:nth-child(1) {
-  left: 5px;
-  top: 7px;
+  left: 2.5px; 
+  top: 3.5px; 
 }
 
 .hamburger.open span:nth-child(2) {
-  left: calc(50% - 5px);
-  top: 7px;
+  left: calc(50% - 2.5px);
+  top: 3.5px;
 }
 
 .hamburger.open span:nth-child(3) {
@@ -193,14 +302,15 @@ nav {
 }
 
 .hamburger.open span:nth-child(5) {
-  left: 5px;
-  top: 29px;
+  left: 2.5px;
+  top: 14.5px;
 }
 
 .hamburger.open span:nth-child(6) {
-  left: calc(50% - 5px);
-  top: 29px;
+  left: calc(50% - 2.5px);
+  top: 14.5px;
 }
+
 
 
 /* Basic layout and styling */
