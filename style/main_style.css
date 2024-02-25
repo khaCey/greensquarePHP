@@ -3,9 +3,6 @@
   padding: 0;
 }
 
-nav {
-}
-
 .nav-head {
   display: flex;
   width: 100%;
@@ -28,13 +25,20 @@ nav {
 }
 
 .burgerContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
-  left: 1em;
   top: 1.25em;
   z-index: 99;
+  max-width: 500px;
+  display: flex;
+  margin-left: 1em;
+  justify-content: flex-start;
+}
+
+.burgerContainer.open {
+    display: flex;
+    width: calc(65vw - 2em);
+    max-width: calc(500px - 2em);
+    justify-content: flex-end;
 }
 
 .sidebar {
@@ -48,7 +52,7 @@ nav {
   width: 65vw;
   max-width: 500px;
   background-color: #008042;
-  transition: left 0.5s ease-in-out; /* Animate the left property */
+  transition: left 0.0s ease-in-out; /* Animate the left property */
   .menu{
     margin-top: 4em;
     list-style-type: none;
@@ -124,7 +128,6 @@ nav {
         }
     }
 }
-
 .contentsContainer{
   width: 100%;
   .item{
@@ -168,7 +171,6 @@ nav {
     }
   }
 }
-
 .blogContainer{
   display: flex;
   flex-direction: column;
@@ -228,10 +230,10 @@ nav {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: .20s ease-in-out;
+  -moz-transition: .20s ease-in-out;
+  -o-transition: .20s ease-in-out;
+  transition: .20s ease-in-out;
   cursor: pointer;
 }
 
