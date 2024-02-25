@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     hamburger.addEventListener('click', function() {
         this.classList.toggle('open');
-        
+        this.parentNode.classList.toggle('open');
         // Check the current state and toggle sidebar visibility
         if (sidebar.style.left === '-65vw') {
             sidebar.style.left = '0';

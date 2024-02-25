@@ -9,7 +9,7 @@
     gtag('config', 'G-9CTQ8Q9DM6');
     gtag('config', 'UA-158308814-1');
   </script>
-
+    
 	<meta charset="utf-8">
 	<meta name="description" content="Green Square 東京・狛江市の英会話カフェ | Green Squareでは、一般英会話・ビジネス英会話・子ども英会話・TOEICの英語資格取得など、あなたの目的や条件に合わせてレッスンが選べます。初心者から上級者まで。英会話に自信がない方でも安心して始められます。">
 	<meta name="keywords" content="英会話,教室,スクール,レッスン,マンツーマン,green,グリーンスクエア,初心者,ビジネス,英会話狛江" />
