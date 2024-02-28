@@ -1,4 +1,4 @@
-name: Deploy via SFTP
+name: SSH Deployment
 
 on:
   push:
@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2 # Consider updating to the latest version if compatible with your setup
+      uses: actions/checkout@v2
 
-    - name: Deploy via SFTP
-      uses: wlixcc/SFTP-Deploy-Action@v1.0
+    - name: Execute SSH commands
+      uses: appleboy/ssh-action@master
       with:
+        host: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
-        server: ${{ secrets.FTP_SERVER }}
-        port: 22 # Default SFTP port, adjust if your server uses a different port
-        ssh_private_key: ${{ secrets.FTP_PASSWORD }} # Assuming the password field contains your SSH private key
-        local_path: ./ # Adjust this if you need to deploy a specific subdirectory
-        remote_path: /path/to/your/server/directory # Adjust to the actual path on your server
-        args: -o StrictHostKeyChecking=no # Additional SSH options if needed
+        password: ${{ secrets.FTP_PASSWORD }}
+        port: 22
+        script: |
+          echo "Running commands on the server"
+          # Replace the above echo command with the actual commands you want to execute on your server.
