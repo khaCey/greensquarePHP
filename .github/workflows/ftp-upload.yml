@@ -1,4 +1,4 @@
-name: Upload to FTP on push to main
+name: Deploy via SFTP
 
 on:
   push:
@@ -6,21 +6,19 @@ on:
       - main
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3 # Updated to use Node.js 20 compatible version
+      uses: actions/checkout@v2 # Consider updating to the latest version if compatible with your setup
 
-    - name: Upload to FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.2.0 # Assuming this version or newer is compatible with Node.js 20
+    - name: Deploy via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
-        server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        port: 22
-        # Additional required inputs based on your FTP server configuration
-        # port: 21 (default FTP port, change if your server uses a different port)
-        # protocol: ftp (default protocol, change if your server uses ftps)
-        local-dir: ./ # Adjust if you want to upload a subdirectory instead of the whole repo
-        server-dir: /path/on/your/server/ # The target directory on your FTP server
+        server: ${{ secrets.FTP_SERVER }}
+        port: 22 # Default SFTP port, adjust if your server uses a different port
+        ssh_private_key: ${{ secrets.FTP_PASSWORD }} # Assuming the password field contains your SSH private key
+        local_path: ./ # Adjust this if you need to deploy a specific subdirectory
+        remote_path: /path/to/your/server/directory # Adjust to the actual path on your server
+        args: -o StrictHostKeyChecking=no # Additional SSH options if needed
