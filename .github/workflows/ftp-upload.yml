@@ -9,13 +9,17 @@ jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v3 # Updated to use Node.js 20 compatible version
 
     - name: Upload to FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0 # Assuming this version or newer is compatible with Node.js 20
       with:
-        ftp-server: ftp://${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        # Additional required inputs based on your FTP server configuration
+        # port: 21 (default FTP port, change if your server uses a different port)
+        # protocol: ftp (default protocol, change if your server uses ftps)
         local-dir: ./ # Adjust if you want to upload a subdirectory instead of the whole repo
+        server-dir: /path/on/your/server/ # The target directory on your FTP server
