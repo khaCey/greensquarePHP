@@ -15,10 +15,10 @@ jobs:
     - name: Deploy via SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
-        username: ${{ secrets.FTP_USERNAME }}
-        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }} # Your SFTP username as a secret
+        server: access947344964.webspace-data.io # The server extracted from your URL
         port: 22 # Default SFTP port, adjust if your server uses a different port
-        ssh_private_key: ${{ secrets.FTP_PASSWORD }} # Assuming the password field contains your SSH private key
+        ssh_private_key: ${{ secrets.FTP_PASSWORD }} # Assuming this secret stores your SSH private key
         local_path: ./ # Adjust this if you need to deploy a specific subdirectory
         remote_path: /path/to/your/server/directory # Adjust to the actual path on your server
         args: -o StrictHostKeyChecking=no # Additional SSH options if needed
