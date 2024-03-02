@@ -1,20 +1,27 @@
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158308814-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158308814-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-9CTQ8Q9DM6');
-    gtag('config', 'UA-158308814-1');
-  </script>
-    
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-9CTQ8Q9DM6');
+		gtag('config', 'UA-158308814-1');
+	</script>
+
 	<meta charset="utf-8">
 	<meta name="description" content="Green Square 東京・狛江市の英会話カフェ | Green Squareでは、一般英会話・ビジネス英会話・子ども英会話・TOEICの英語資格取得など、あなたの目的や条件に合わせてレッスンが選べます。初心者から上級者まで。英会話に自信がない方でも安心して始められます。">
 	<meta name="keywords" content="英会話,教室,スクール,レッスン,マンツーマン,green,グリーンスクエア,初心者,ビジネス,英会話狛江" />
 	<meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=no">
 	<meta property="og:image" content="images/greensquare.webp" />
+<<<<<<< HEAD:components/head.php
+=======
+	<title>Green Square Cafe</title>
+>>>>>>> fa47f347f3d8f47d56bedf84337c6898ac05d3b0:head.php
 	<link href="style/main_style.css" rel="stylesheet" type="text/css" media="all" />
 
 	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.webp">
@@ -26,7 +33,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.webp">
 	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.webp">
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.webp">
-	<link rel="icon" type="image/webp" sizes="192x192"  href="favicon/android-icon-192x192.webp">
+	<link rel="icon" type="image/webp" sizes="192x192" href="favicon/android-icon-192x192.webp">
 	<link rel="icon" type="image/webp" sizes="32x32" href="favicon/favicon-32x32.webp">
 	<link rel="icon" type="image/webp" sizes="96x96" href="favicon/favicon-96x96.webp">
 	<link rel="icon" type="image/webp" sizes="16x16" href="favicon/favicon-16x16.webp">
