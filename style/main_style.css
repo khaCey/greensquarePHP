@@ -242,7 +242,6 @@
   .podcastDiv {
 >>>>>>> fa47f347f3d8f47d56bedf84337c6898ac05d3b0
     width: 100%;
-
     .item {
       display: flex;
       flex-direction: column;
