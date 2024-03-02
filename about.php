@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php include 'head.php';?>
+  <?php include 'components/head.php';?>
+  <title>About Green Square Cafe</title>
   <script src="script.js"></script>
 </head>
 <body>
-  <?php include 'nav.php';?>
-  <?php include 'aboutContents.php';?>
-  <?php include 'footer.php';?>
+  <?php include 'components/nav.php';?>
+  <?php include 'components/aboutContents.php';?>
+  <?php include 'components/footer.php';?>
 </body>
 </html>

@@ -194,17 +194,6 @@
       }
     }
   }
-  .lessonContents{
-    .item{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .question{
-      color: #00994d;
-    }
-  }
   .podcastDiv{
     width: 100%;
     .item{
@@ -221,6 +210,17 @@
       }
     }
   }
+}
+.lessonContents{
+    .item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .question{
+      color: #00994d;
+    }
 }
 /* hamburger icon */
 .hamburger {
@@ -409,4 +409,38 @@ footer{
       width: 450px;
     }
   }
+}
+
+
+/* about */
+.aboutVideos{
+    display: flex;
+    outline: 1px dashed red;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    .video{
+        width: 45%;
+        outline: 1px dashed black;
+        max-width: 315px;
+    }
+    .videoFrameFull{
+        max-width: 1280px;
+        max-height: 720px;
+        width: 100%;
+    }
+    .lowerHalf{
+        width: 100%;
+        outline: 1px dashed blue;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .videoFrame{
+        max-width: 672px;
+        max-height: 378px;
+        width: 100%;
+    }
 }
