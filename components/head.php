@@ -18,10 +18,6 @@
 	<meta name="keywords" content="英会話,教室,スクール,レッスン,マンツーマン,green,グリーンスクエア,初心者,ビジネス,英会話狛江" />
 	<meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=no">
 	<meta property="og:image" content="images/greensquare.webp" />
-<<<<<<< HEAD:components/head.php
-=======
-	<title>Green Square Cafe</title>
->>>>>>> fa47f347f3d8f47d56bedf84337c6898ac05d3b0:head.php
 	<link href="style/main_style.css" rel="stylesheet" type="text/css" media="all" />
 
 	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.webp">

@@ -9,12 +9,12 @@
         <div class="contact">
             <div class="firstLine">
                 <div class="item">
-                    <p>Address</p><br>
+                    <h3>Address</h3><br>
                     <p>Green Square Cafe<br>
                         〒201-0012<br>東京都 狛江市 <br>中和泉 1-2-9<br>松本ビル 2F</p><br>
                 </div>
                 <div class="item">
-                    <p>Phone Number</p><br>
+                    <h3>Phone Number</h3><br>
                     <a href="tel:+81-03-5761-8189">03-5761-8189</a><br><br>
                     <p>Contact Us</p><br>
                     <a href="mailto:hello@greensquare.jp?subject=Hey there!">hello@greensquare.jp</a>

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var sidebar = document.querySelector('.sidebar');
     
     // Initially hide the sidebar off-screen
-    sidebar.style.left = '-65vw'; // This assumes your sidebar's width is 75vw
+    sidebar.style.left = '-65vw'; // Adjust this value based on your sidebar's width
 
     hamburger.addEventListener('click', function() {
         this.classList.toggle('open');
@@ -58,7 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
             sidebar.style.left = '-65vw';
         }
     });
+
+    // Add an event listener to the document to check for clicks outside the sidebar
+    document.addEventListener('click', function(event) {
+        var isClickInsideSidebar = sidebar.contains(event.target);
+        var isClickHamburger = hamburger.contains(event.target);
+
+        // If the click is outside the sidebar and not on the hamburger, hide the sidebar
+        if (!isClickInsideSidebar && !isClickHamburger) {
+            sidebar.style.left = '-65vw'; // Animate out
+            // Optionally, remove the 'open' class if you are using it for styling
+            hamburger.classList.remove('open');
+            hamburger.parentNode.classList.remove('open');
+        }
+    });
 });
+
 
 
 

@@ -6,8 +6,8 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <?php include 'components/nav.php';?>
-  <?php include 'components/landing.php';?>
-  <?php include 'components/footer.php';?>
+    <?php include 'components/nav.php';?>
+    <?php include 'components/landing.php';?>
+    <?php include 'components/footer.php';?>
 </body>
 </html>
