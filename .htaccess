@@ -10,8 +10,4 @@ RewriteEngine On
   # Redirect from "/index" or "/index.php" to "/"
   RewriteRule ^index(\.php)?$ / [R=301,L]
 
-  # Rewrite requests for "/filename" back to "/filename.php" if the .php file exists
-  RewriteCond %{REQUEST_FILENAME}.php -f
-  RewriteRule ^([^.]+)$ $1.php [NC,L]
-
 </IfModule>
