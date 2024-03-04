@@ -1,15 +1,17 @@
 RewriteEngine On
 
-# Check if mod_rewrite is enabled
+# Ensure mod_rewrite is available
 <IfModule mod_rewrite.c>
 
-  # Rewrite only if the request is not for a valid directory
-  RewriteCond %{REQUEST_FILENAME} !-d
+  # Redirect from "/filename.php" to "/filename"
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+\.)+php\ HTTP
+  RewriteRule ^(.+)\.php$ /$1 [R=301,L]
 
-  # Rewrite only if the request is not for a valid file
-  RewriteCond %{REQUEST_FILENAME} !-f
+  # Redirect from "/index" or "/index.php" to "/"
+  RewriteRule ^index(\.php)?$ / [R=301,L]
 
-  # Remove .php extension
-  RewriteRule ^([^\.]+)$ $1.php [NC,L]
+  # Rewrite requests for "/filename" back to "/filename.php" if the .php file exists
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^([^.]+)$ $1.php [NC,L]
 
 </IfModule>
