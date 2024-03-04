@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Redirect to HTTPS if not already using it
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Check if the request is for a file that does not exist
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Serve .html files when available
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# If the above rule doesn't apply and it's not requesting a directory,
+# try to serve the .php version
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
