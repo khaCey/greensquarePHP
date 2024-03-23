@@ -17,7 +17,7 @@
             <li class="item"><a href='lessons.php'><p id="text">コース一覧</p></a></li>
             <li class="item"><a href='pricing.php'><p id="text">料金体制</p></a></li>
             <li class="item"><a href='online-lessons.php'><p id="text">オンラインレッスン</p></a></li>
-            <li class="item"><a href='podcasts.php'><p id="text">ポッドキャスト</p></a></li>
+            <li class="item"><a href='podcast.php'><p id="text">ポッドキャスト</p></a></li>
             <li class="item"><a href='pronunciation-challenge.php'><p id="text">発音チャレンジ</p></a></li>
             <li class="item"><a href='articles.php'><p id="text">ブログ</p></a></li>
             <li class="item"><a href='gallery.php'><p id="text">ギャラリー</p></a></li>

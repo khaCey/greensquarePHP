@@ -34,6 +34,6 @@
             </p><br>
         </div>
     </div>
-    <?php include 'lessonContents.php';?>
+    <?php include 'lessonnaiyou.php';?>
     <?php include 'lessonDetails.php';?>
 </div>
